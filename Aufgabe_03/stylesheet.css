@@ -22,9 +22,20 @@ img src="/Aufgabe_03/food.jpg" {
     margin: 2%
 }
 
+img src="/Aufgabe_03/doit.jpg" {
+    width: 320px;
+    height: 320px;     
+
+}
+
 #art {
     background-color: #f6f6f6;
     width: 85%;
     margin: 2%
 }
 
+img src="/Aufgabe_03/legogh.jpg" {
+    width: 320px;
+    height: 320px;     
+
+}
