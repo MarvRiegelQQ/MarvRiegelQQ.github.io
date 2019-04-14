@@ -1,6 +1,6 @@
 body {
     background-color: #efebdc;
-    font-size: 1.125em;
+    font-size: 1.0em;
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
@@ -8,6 +8,10 @@ body {
     background-color: #f6f6f6;
     width: 85%;
     margin: 2%
+}
+
+#foodpic {
+    max-height: 20%
 }
 
 #comics {
