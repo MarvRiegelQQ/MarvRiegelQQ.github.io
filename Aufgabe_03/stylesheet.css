@@ -4,25 +4,37 @@ body {
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
+h1,h2 {
+    text-align: center
+}
+
 #food {
     background-color: #f6f6f6;
     width: 85%;
-    margin: 2%
-}
+    margin: 5%
+    }
 
 img {
     width: 320px;
-    height: 320px;     
+    height: 320px;
+    border-radius: 25px;
 }
 
 #comics {
     background-color: #f6f6f6;
     width: 85%;
-    margin: 2%
+    margin: 4%
 }
 
 #art {
     background-color: #f6f6f6;
     width: 85%;
-    margin: 2%
+    margin: 7%
 }
+
+p {
+    font-size: 0.85em;
+    font-family: 'Times New Roman', Times, serif;
+    color: #9e9e9e;
+
+ }
