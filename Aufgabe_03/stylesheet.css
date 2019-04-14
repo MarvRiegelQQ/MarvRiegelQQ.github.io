@@ -18,6 +18,7 @@ img {
     width: 320px;
     height: 320px;
     border: 2px solid #5e5e5e;
+    float: left;
 }
 
 #comics {
