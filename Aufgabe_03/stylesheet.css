@@ -35,11 +35,11 @@ article {
     width: 320px;
     height: 320px;
     border-radius: 30px;
+    border: 2px solid #000000;
 }
 
 #art {
     background-color: #f6f6f6;
-    border: 2px solid #000000;
     width: 85%;
     margin: 7%;
 }
