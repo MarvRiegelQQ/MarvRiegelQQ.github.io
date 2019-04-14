@@ -8,6 +8,10 @@ h1,h2 {
     text-align: center;
 }
 
+article {
+    width: 50%;
+}
+
 #food {
     background-color: #f6f6f6;
     width: 85%;
@@ -35,6 +39,7 @@ h1,h2 {
 
 #art {
     background-color: #f6f6f6;
+    border: 2px solid #000000;
     width: 85%;
     margin: 7%;
 }
