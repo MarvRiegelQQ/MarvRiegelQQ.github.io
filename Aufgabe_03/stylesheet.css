@@ -5,31 +5,31 @@ body {
 }
 
 h1,h2 {
-    text-align: center
+    text-align: center;
 }
 
 #food {
     background-color: #f6f6f6;
     width: 85%;
-    margin: 5%
+    margin: 5%;
     }
 
 img {
     width: 320px;
     height: 320px;
-    border-radius: 25px;
+    border: 2px solid #5e5e5e;
 }
 
 #comics {
     background-color: #f6f6f6;
     width: 85%;
-    margin: 4%
+    margin: 4%;
 }
 
 #art {
     background-color: #f6f6f6;
     width: 85%;
-    margin: 7%
+    margin: 7%;
 }
 
 p {
