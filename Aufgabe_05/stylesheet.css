@@ -17,6 +17,11 @@ nav ul{
     padding-top     : 0; 
 }
 
+nav li{
+    display: inline;
+    padding: 1.8em; 
+}
+
 nav li.art{
     color: #9e9e9e;
 }
