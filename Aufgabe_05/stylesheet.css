@@ -19,9 +19,8 @@ h1 {
 nav ul{
     list-style-type : none;
     color           : #FFFFEF;
-    font-size       : 20px;
+    font-size       : 0.9em;
     text-align      : right;
-    padding-top     : 0; 
 }
 
 nav li{
@@ -54,8 +53,7 @@ section {
     background-color: #f6f6f6;
     width           : 85%;
     margin          : 5%;
-    float: center;
-
+    
     }
 
 img.content {
