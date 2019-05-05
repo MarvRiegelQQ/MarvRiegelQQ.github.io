@@ -37,7 +37,8 @@ nav li:hover{
 }
 
 main {
-    width: 56%;
+    width: 60%;
+    float: center;
 }
 
 h2 {
@@ -57,7 +58,7 @@ section {
     float           : left;
 }
 
-section:nth-child(3+1) {
+section:nth-child(4) {
     clear: left;
 }
 
