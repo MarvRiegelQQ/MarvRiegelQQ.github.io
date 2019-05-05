@@ -5,7 +5,8 @@ body {
 }
 
 header {
-    width: 100%
+    width           : 100%;
+    background-color: #FFFFFF
 }
 
 nav ul{
@@ -17,21 +18,19 @@ nav ul{
 }
 
 nav li.art{
-    color: #9e9e9e
-}
+    color: #9e9e9e;
 }
 
 nav li.food{
-    color: #9e9e9e
-}
+    color: #9e9e9e;
 }
 
 nav li.comics{
-    color: #9e9e9e
+    color: #9e9e9e;
 }
 
 nav li:hover{
-    color: #000000
+    color: #000000;
 }
 
 #navgrey {
@@ -44,7 +43,7 @@ nav li:hover{
 }
 
 main {
-    width: 56%
+    width: 56%;
 }
 
 h1,h2 {
