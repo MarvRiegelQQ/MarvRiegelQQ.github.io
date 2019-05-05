@@ -53,8 +53,12 @@ section {
     background-color: #f6f6f6;
     width           : 85%;
     margin          : 5%;
-    
-    }
+    float           : left;
+}
+
+main > section:nth-child(3+1) {
+    clear: left;
+}
 
 img.content {
     width           : 160px;
