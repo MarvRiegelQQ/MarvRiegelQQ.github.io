@@ -39,7 +39,6 @@ nav li:hover{
 main {
     width           : 60%;
     margin-left     : 20%;
-    margin-bottom   : 150%;
 }
 
 h2 {
@@ -96,8 +95,9 @@ aside.aside1:hover {
 
 footer {
         width       : 100%;
-        position    : absolute;
+        position    : sticky;
         bottom      : 0;
         background  : #FFFFEF;
         float       : left;
+        text-align  : left;
     }
