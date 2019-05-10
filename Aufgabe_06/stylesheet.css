@@ -19,11 +19,6 @@ h1 {
 
 #nav {
     position: fixed;
-    left    : 20px;
-    top     : -45px;
-    width   : 110px;
-    padding : 10px;
-    height  : auto
 }
 
 ul {
