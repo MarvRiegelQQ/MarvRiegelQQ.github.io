@@ -27,9 +27,8 @@ ul {
     width          : 300px;
     top            : 118px;
     left           : -15px;
-    text-decoration: none;
     list-style     : none;
-    font-size      : 200%;
+    font-size      : 110%;
 }
 
 #nav:hover+ul {
