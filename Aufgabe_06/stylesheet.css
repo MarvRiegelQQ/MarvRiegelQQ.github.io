@@ -17,24 +17,50 @@ h1 {
     padding-left: 1.6em;
     }
 
-nav ul{
-    list-style-type : none;
-    color           : #FFFFEF;
-    font-size       : 0.9em;
-    text-align      : left;
+#nav {
+    position: fixed;
+    left    : 20px;
+    top     : -45px;
+    width   : 110px;
+    padding : 10px;
+    height  : auto
 }
 
-nav li{
-    display: inline;
-    padding: 1em; 
+nav {
+    position: fixed;
+    z-index : 111;
 }
 
-nav li{
-    color: #9e9e9e;
+ul {
+    position       : fixed;
+    display        : none;
+    width          : 300px;
+    top            : 118px;
+    left           : -15px;
+    text-decoration: none;
+    list-style     : none;
+    font-size      : 200%;
 }
 
-nav li:hover{
-    color: #000000;
+#nav:hover+ul {
+    display: block;
+}
+
+ul:hover {
+    display: block;
+}
+
+li {
+    padding         : 10px;
+    padding-left    : 30px;
+    display         : block;
+    background-color: #ffb33a;
+    color           : #fff;
+}
+
+li:hover {
+    display         : block;
+    background-color: #c47a03;
 }
 
 main {
