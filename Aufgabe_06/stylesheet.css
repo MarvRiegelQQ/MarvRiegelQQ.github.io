@@ -26,11 +26,6 @@ h1 {
     height  : auto
 }
 
-nav {
-    position: fixed;
-    z-index : 111;
-}
-
 ul {
     position       : fixed;
     display        : none;
