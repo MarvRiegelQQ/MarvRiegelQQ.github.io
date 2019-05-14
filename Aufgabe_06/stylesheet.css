@@ -19,6 +19,11 @@ h1 {
 
 #navgrey {
     position: fixed;
+    height            : 40px;
+    width             : 40px;
+    border-radius     : 50%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition        :         transform .8s ease-in-out;
 }
 
 ul {
@@ -32,7 +37,9 @@ ul {
 }
 
 #navgrey:hover+ul {
-    display: block;
+    display          : block;
+    -webkit-transform: rotate(360deg);
+    transform        : rotate(360deg);
 }
 
 ul:hover {
@@ -72,6 +79,7 @@ section {
     margin          : 1%;
     float           : left;
     padding         : 2%;
+
 }
 
 section:nth-child(4) {
