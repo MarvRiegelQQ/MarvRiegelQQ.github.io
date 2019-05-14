@@ -49,6 +49,7 @@ li {
 li:hover {
     display         : block;
     background-color: #fad8d815;
+    transition      : linear 1s;
 }
 
 main {
