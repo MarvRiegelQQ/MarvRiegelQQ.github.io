@@ -24,11 +24,11 @@ h1 {
 ul {
     position       : fixed;
     display        : none;
-    width          : 300px;
+    width          : 150px;
     top            : 118px;
     left           : -15px;
     list-style     : none;
-    font-size      : 110%;
+    font-size      : 150%;
 }
 
 #navgrey:hover+ul {
