@@ -120,7 +120,7 @@ footer {
     /*Tablet-Modus*/
 @media screen and (max-width: 64em){
 section {
-    width: 49%;
+    width: 30%;
 
     }
 }
