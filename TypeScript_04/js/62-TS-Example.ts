@@ -60,7 +60,7 @@ window.onload = function () {
     document.getElementById("monsterSpawner").addEventListener("click", generateMonster, false);
     updatePlayerLevel(0); 
     document.getElementById("fightWeak").addEventListener('click', fightAllWeakMonsters, false);
-    document.getElementById("fightAll").addEventListener('click', fightallMonsters, false);
+    document.getElementById("fightAll").addEventListener('click', fightAllMonsters, false);
     document.getElementById("fightWeakest").addEventListener('click', fightWeakestMonster, false);
 }
 
@@ -280,7 +280,7 @@ function fightMonster(_index : number)
 }
 
 
-function fightallMonsters() {
+function fightAllMonsters() {
     for (let i = monsterArray.length - 1; i >= 0; i--) 
     {
         fightMonster(i);
