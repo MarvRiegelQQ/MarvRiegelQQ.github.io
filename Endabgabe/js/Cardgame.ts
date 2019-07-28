@@ -2,21 +2,17 @@
 interface cards {
     cardValue: number;
     cardColour: string;
-    }
+}
 
 let playerCards: cards[] = [];
 let enemyCards: cards[] = [];
 let discardedCardsPile: cards[] = [];                           
 let drawCardsPile: cards[] = [];
-let playedCards: cards[] = [];
-let discardTop: cards[] = [];
-let currentPlayer: boolean;
-let turnPlayer: boolean;
-let drawnCard : boolean;
+
 //Spielbeginn bei Seitenaufruf
 window.onload = function () {
 
-    newGame();
+    newDeck();
     shuffleCards();
     dealCards();
     generateGamePlay();
@@ -24,12 +20,12 @@ window.onload = function () {
 }
 
 //Funktionen für das Spiel
-function newGame() {                            //Erstellt neues Deck
+function newDeck() {                            //Erstellt neues Deck
 
     let newCardValue: number;
     let newCardColour: string;
 
-    for(let v:number=1; v<=9; v++){
+    for(let v:number=1; v<=8; v++){
     for(let c:number=0; c<4; c++){
 
         newCardValue=v;
@@ -72,7 +68,7 @@ function generateGamePlay(){
     for (let j: number = 0; j < playerCards.length; j++) {
         generatePlayerHTML(j);
     }
-    for (let k: number = 0; k < playedCards.length; k++) {
+    for (let k: number = 0; k < discardedCardsPile.length; k++) {
         generateDiscardedHTML(k);
     }
     for (let i: number = 0; i < enemyCards.length; i++) {
@@ -83,25 +79,25 @@ function generateGamePlay(){
 
 
     //Generiert Karten in der Hand des Spielers. Eventlistener macht die Karten klickbar/spielbar
-function generatePlayerHTML(NumberCard : number){
+function generatePlayerHTML(Card : number){
     let divcards: HTMLElement = document.createElement("div");
-    divcards.setAttribute("id", "playerHand" + NumberCard + 1);
+    divcards.setAttribute("id", "playerHand" + Card + 1);
     divcards.setAttribute("class", "card");
-    divcards.addEventListener('click', function  (){ movePlay(NumberCard, turnPlayer); }, false);
+    divcards.addEventListener('click', function  (){ movePlay(); }, false);
     document.getElementById("playerHand").appendChild(divcards);
-    let shownCardValue: string = playerCards[NumberCard].cardValue + "";
+    let shownCardValue: string = playerCards[Card].cardValue + "";
 
     //valueTop generiert die HTML-Elemente der Farbe/Wertigkeit  
     let valueTop: HTMLElement = document.createElement("p");
     valueTop.innerHTML = shownCardValue + "";
-    valueTop.setAttribute("class", playerCards[NumberCard].cardColour);
+    valueTop.setAttribute("class", playerCards[Card].cardColour);
     divcards.appendChild(valueTop);
 
 }
     //Generiert die verdeckten Karten in der Gegnerhand
-function generateEnemyHTML(NumberCard : number){
+function generateEnemyHTML(Card : number){
     let divcards: HTMLElement = document.createElement("p");
-    divcards.setAttribute("id", "enemyHand" + (NumberCard + 1));                  
+    divcards.setAttribute("id", "enemyHand" + (Card + 1));                  
     divcards.setAttribute("class", "cardHidden");     
     document.getElementById("enemyHand").appendChild(divcards); 
 }
@@ -110,7 +106,7 @@ function generateDrawPileHTML(){
     let divcards: HTMLElement = document.createElement("div");              
     divcards.setAttribute("id", "DrawPileTop");                  
     divcards.setAttribute("class", "cardHidden");     
-    divcards.addEventListener('click', function () { moveDraw(turnPlayer); }, false); 
+    divcards.addEventListener('click', function () { moveDraw(); }, false); 
     document.getElementById("deckZone").appendChild(divcards); 
 }
     //Generiert den Ablagestapel
@@ -129,38 +125,124 @@ function generateDiscardedHTML(NumberCard : number){
    
 }
 
-// Spielzug ausführen, wenn Karte angeklickt wurde
-function movePlay(cardToPlay : cards, index : number) {
-    // Nur möglich, wenn Spieler (nicht Gegner) an der Reihe ist
-    if (currentPlayer) {
-        // überprüfe erst, ob die geklickte Karte wirklich legbar ist
-        if (cardToPlay.cardColour == discardTop.cardColour || cardToPlay.cardValue == discardTop.cardValue){
-            currentPlayer = false; // Gegner ist als nächstes dran
-            drawnCard = false;
-            playedCards.push(cardToPlay); // Karte wird auf Ablagestapel gelegt...
-            discardTop = cardToPlay; // ...und ist jetzt die oberste Karte auf dem Ablagestapel
-            playerCards.splice(index,1); //...und wird aus Spielerdeck entfernt
-            updateHtml(playerCards);
-            updateHtml(activeCards);
-
-            // Überprüfe ob Spieler noch Karten hat, also ob die gelegte Karte seine letzte war
-            if (playerCards.length == 0){
-                setTimeout(function () {document.getElementById("currentMove").innerHTML = "Du hast gewonnen!"},2000);
-                
-                clearAll();
-            }
-            else{
-                document.getElementById("currentMove").innerHTML = "Dein Gegner ist an der Reihe!";
-                opponent();
-            }
+function updateHTML(Target : string){
+    ClearHTML(Target);
+    if(Target == "playerCards"){
+        for(let i=0; i< playerCards.length; i++) {
+            generatePlayerHTML(playerCards[i],"playerCards",i);
         }
-        else{
-            window.alert("Die Karte passt nicht! Spiel eine andere oder nimm eine neue Karte auf.");
+    }
+    if(Target == "enemyCards"){
+        for(let i=0; i< enemyCards.length; i++) {
+            generateEnemyHTML(enemyCards[i],"enemyCards",i);
         }
+    }
+    if(Target == "discardPile"){
+        generatePlayerHTML(discardedCardsPile[discardedCardsPile.length-1], "discardPile",discardedCardsPile.length-1);
+    }
+    if(Target == "drawPile"){
+        generateEnemyHTML(drawCardsPile[drawCardsPile.length-1], "drawPile", drawCardsPile.length-1);
     }
 }
 
 
+function ClearHTML(Target : string){
+    let Element: HTMLElement = document.getElementById(Target);
+    while (Element.firstChild){
+        Element.removeChild(Element.firstChild);
+    }
+}
 
-//Karte ablegen nach Klick auf Karte
-  
+
+function movePlay(){
+    for(let i=0; i<5; i++){
+        playerCards.push(drawCardsPile[i]);
+        enemyCards.push(drawCardsPile[i+4]);
+    }
+
+    discardedCardsPile.push(drawCardsPile[1]);
+    drawCardsPile.splice(0);
+
+    for(let i=0; i<playerCards.length; i++) {
+        generatePlayerHTML(i);
+    }
+    for(let i=0; i<enemyCards.length; i++) {
+        generateEnemyHTML(i);
+    }
+
+
+    generatePlayerHTML(discardedCardsPile.length-1);
+    generateEnemyHTML(drawCardsPile.length-1);
+}
+
+
+function moveDraw(){
+    if(checkMatchingCard(playerCards)==false){
+        playerCards.push(drawCardsPile[drawCardsPile.length-1]);
+        drawCardsPile.splice(drawCardsPile.length-1, 1);
+        updateHTML("playerCards");
+        updateHTML("drawPile");
+    }
+    if(checkMatchingCard(playerCards)==false){
+        EnemyTurn();
+    }
+}
+
+function checkMatchingCard(array : cards[]) : boolean {
+    let matchingCard : boolean = false;
+    for (let i=0; i<array.length;i++) {
+        if (array[i].cardColour == discardedCardsPile[discardedCardsPile.length-1].cardColour || array[i].cardValue == discardedCardsPile[discardedCardsPile.length-1].cardValue){
+            matchingCard = true;
+            break;
+        }
+    }
+    return matchingCard;
+}
+
+function endofgame(win: boolean){
+    if(win){
+        alert("Great Job! You Win!");
+        location.reload();
+    }
+    else{
+        alert("Game Over! Again?");
+        location.reload();
+    }
+}
+
+function CardPut(card: cards, index: number){
+    if(card.cardValue == discardedCardsPile[discardedCardsPile.length-1].cardValue || card.cardColour == discardedCardsPile[discardedCardsPile.length-1].cardColour){
+        discardedCardsPile.push(card);
+        playerCards.splice(index, 1);
+        if(playerCards.length < 1){endofgame(true);}
+        updateHTML("playerHand");
+        updateHTML("discardPile");
+        EnemyTurn();
+    }
+}
+
+function EnemyTurn(){
+    let i=0;
+    for(i; i<enemyCards.length;i++){
+        if(enemyCards[i].cardColour == discardedCardsPile[discardedCardsPile.length-1].cardColour || enemyCards[i].cardValue == discardedCardsPile[discardedCardsPile.length-1].cardValue){
+            discardedCardsPile.push(enemyCards[i]);
+            enemyCards.splice(i,1);
+            if(enemyCards.length < 1){endofgame(false);}
+            updateHTML("discardPile");
+            updateHTML("enemyHand");
+            break;
+        }
+    }
+    if(i >= enemyCards.length){
+        enemyCards.push(drawCardsPile[drawCardsPile.length-1]);
+        drawCardsPile.splice(drawCardsPile.length-1,1);
+        updateHTML("discardPile");
+        updateHTML("enemyHand");
+    if(enemyCards[enemyCards.length-1].cardColour == discardedCardsPile[discardedCardsPile.length-1].cardColour || enemyCards[enemyCards.length-1].cardValue == discardedCardsPile[discardedCardsPile.length-1].cardValue){
+        discardedCardsPile.push(enemyCards[enemyCards.length-1]);
+        enemyCards.splice(enemyCards.length-1,1);
+        updateHTML("discardPile");
+        updateHTML("enemyHand");
+    }
+    }
+}
