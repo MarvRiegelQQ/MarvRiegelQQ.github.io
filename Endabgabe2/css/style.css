@@ -1,0 +1,120 @@
+header {
+    background-color: grey;
+    width: 75%;
+    height: 10%;
+}
+
+main{
+	background-color: #3b3b3b;
+	width: 75%;
+
+}
+
+.cards{
+    height: 150px;
+    width: 80px;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 10px;
+}
+#playerHand .cards{
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3em;
+}
+#npcHand .cards{
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1em;
+}
+
+#playedPile .cards{
+    height: 150px;
+    width: 80px;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+.cards.flipped{
+    height: 150px;
+    width: 80px;
+    border-color: black;
+    border-width: 5px;
+	border-radius: 10px;
+	background-color: aliceblue;
+}
+
+#drawPile .cards{
+    height: 150px;
+    width: 80px;
+    border-color: black;
+    border-width: 5px;
+	border-radius: 10px;
+	background-color: aliceblue;
+}
+.cardsValue{
+    color: white;
+    margin-left:30%;
+    padding: 10%;
+    font-size: 2em;
+}
+.blue{
+	background-color: blue;
+	border-color: black;
+	border-width: 5px;
+	border-radius: 10px;
+}
+.darkslateblue{
+	background-color: darkslateblue;
+	border-color: black;
+	border-width: 5px;
+	border-radius: 10px;
+}
+.green{
+	background-color: green;
+	border-color: black;
+	border-width: 5px;
+	border-radius: 10px;
+}
+.orange{
+	background-color: orange;
+	border-color: black;
+	border-width: 5px;
+	border-radius: 10px;
+}
+#npcHand{
+    background-color: lightgrey;
+	height: 200px;
+	border-color: black;
+	border-width: 4px;
+    width: 75%;
+    clear: both;
+    margin-bottom: -1%;
+}
+#drawPile{
+    height: 150px;
+    width: 75px;
+    float: left;
+    margin-left: 25%;
+    margin-bottom: 0%;
+    margin-top: 7%;
+}
+#playedPile{
+    height: 150px;
+    width: 75px;
+    float: left;
+    margin-bottom: 0%;
+    margin-left: 25%;
+}
+#playerHand{
+	background-color: lightgray;
+	border-color: black;
+	border-width: 4px;
+    height: 200px;
+    width: 75%;
+    clear: both;
+    margin-bottom: -75%;
+}
