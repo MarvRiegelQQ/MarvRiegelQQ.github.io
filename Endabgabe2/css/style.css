@@ -11,18 +11,20 @@ main{
 }
 
 .cards{
-    height: 150px;
-    width: 80px;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 10px;
+	height: 8rem;
+	width: 5rem;
+	border: 4px solid black;
+	border-radius: 10px;
+	text-align: center;
+	float: left;
+	margin: 8px;
 }
 #playerHand .cards{
     display: inline-block;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 3em;
 }
+
 #npcHand .cards{
     display: inline-block;
     margin-left: 5%;
@@ -36,15 +38,18 @@ main{
     border-color: black;
     border-width: 5px;
     border-radius: 10px;
+    position: fixed;
 }
 
 .cards.flipped{
-    height: 150px;
-    width: 80px;
-    border-color: black;
-    border-width: 5px;
+	height: 8rem;
+	width: 5rem;
+	border: 4px solid black;
 	border-radius: 10px;
 	background-color: aliceblue;
+	text-align: center;
+	float: left;
+	margin: 8px;
 }
 
 #drawPile .cards{
@@ -59,62 +64,61 @@ main{
     color: white;
     margin-left:30%;
     padding: 10%;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 .blue{
 	background-color: blue;
-	border-color: black;
-	border-width: 5px;
-	border-radius: 10px;
+
 }
 .darkslateblue{
 	background-color: darkslateblue;
-	border-color: black;
-	border-width: 5px;
-	border-radius: 10px;
+
 }
 .green{
 	background-color: green;
-	border-color: black;
-	border-width: 5px;
-	border-radius: 10px;
+
 }
 .orange{
 	background-color: orange;
-	border-color: black;
-	border-width: 5px;
-	border-radius: 10px;
+
 }
 #npcHand{
-    background-color: lightgrey;
-	height: 200px;
-	border-color: black;
-	border-width: 4px;
-    width: 75%;
-    clear: both;
-    margin-bottom: -1%;
+	height: 160px;
+	width: 98%;
+	border: 5px solid black;
+	border-radius: 15px;
+	clear: left;
+	margin: 8px;
+	background-color: #e6e6e62d;
+	float: center;
 }
 #drawPile{
-    height: 150px;
-    width: 75px;
-    float: left;
-    margin-left: 25%;
-    margin-bottom: 0%;
-    margin-top: 7%;
+	height: auto;
+	Width: auto;
+	margin: 4%;
+	background-color: rgb(179, 170, 170); 
+	float: left;
+	border: 5px solid black;
+	border-radius: 15px;
+	
 }
 #playedPile{
-    height: 150px;
-    width: 75px;
-    float: left;
-    margin-bottom: 0%;
-    margin-left: 25%;
+	height: 200px;
+	width: 200px;
+	margin-top: 4%;
+	margin-bottom: 4%;
+	background-color: #e6e6e62d;
+	border: 5px solid black;
+	border-radius: 15px;
+	float: left;
 }
 #playerHand{
-	background-color: lightgray;
-	border-color: black;
-	border-width: 4px;
-    height: 200px;
-    width: 75%;
-    clear: both;
-    margin-bottom: -75%;
+	height: 160px;
+	width: 98%;
+	border: 5px solid black;
+	border-radius: 15px;
+	clear: left;
+	margin: 8px;
+	background-color: #e6e6e62d;
+	float: center;
 }
