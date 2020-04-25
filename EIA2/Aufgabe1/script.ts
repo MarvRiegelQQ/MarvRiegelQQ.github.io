@@ -1,12 +1,12 @@
 var Boxes;
 (function (Boxes) {
+    debugger;
     var n = 5;
     var color;
     var x = 0;
     var y = 0;
     window.addEventListener("load", drawboxes);
     function drawboxes() {
-        debugger;
         for (var i = 0; i < n; i++) {
             y += (i == 2) ? 20 : 50;
             x = (x + 170) % 400;
