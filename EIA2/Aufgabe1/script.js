@@ -1,6 +1,5 @@
 var Boxes;
 (function (Boxes) {
-    debugger;
     var n = 5;
     var color;
     var x = 0;
