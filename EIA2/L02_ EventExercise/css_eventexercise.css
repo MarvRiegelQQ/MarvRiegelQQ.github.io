@@ -1,0 +1,32 @@
+span {
+    position: fixed;
+    background-color: #8B8378;
+    border: medium solid rgb(209, 55, 55);
+    width: 250px;
+    text-align: center;
+}
+#div0 {
+    left: 100px;
+    border: medium solid black;
+    display: inline-block;
+    margin-left: 120px;
+    height: 450px;
+    width: 400px;
+    background-color: 	#ff8c00;
+}
+#div1 {
+    left: 900px;
+    border: medium solid black;
+    display: inline-block;
+    margin-right: 120px;
+    height: 450px;
+    width: 400px;
+    background-color: 	#ff8c00;
+    
+}
+
+h1 {
+    border-style: solid;
+    border: black;
+    position: relative;
+}
