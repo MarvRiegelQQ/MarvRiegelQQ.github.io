@@ -14,7 +14,6 @@ namespace canvas {
         console.log(crc2);
 
         circle();
-//        triangle();
         square();
     }
 
@@ -67,7 +66,7 @@ namespace canvas {
 
     }
 
-    let newCanvas: HTMLElement = <HTMLElement>document.querySelector(".reloadButton");
+    let newCanvas: HTMLElement = <HTMLElement>document.querySelector(".reloadCanvas");
 
     newCanvas.addEventListener("click", function (): void {
         location.reload();

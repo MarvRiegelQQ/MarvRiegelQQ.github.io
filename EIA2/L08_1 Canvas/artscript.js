@@ -11,7 +11,6 @@ var canvas;
         crc4 = canvas.getContext("2d");
         console.log(crc2);
         circle();
-        //        triangle();
         square();
     }
     function circle() {
@@ -43,7 +42,7 @@ var canvas;
             crc4.stroke();
         }
     }
-    let newCanvas = document.querySelector(".reloadButton");
+    let newCanvas = document.querySelector(".reloadCanvas");
     newCanvas.addEventListener("click", function () {
         location.reload();
     });

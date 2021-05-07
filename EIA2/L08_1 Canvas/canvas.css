@@ -18,10 +18,10 @@ h1 {
 
 
 }
-.reloadButton {
-    
-    margin-top: -400px;
-    margin-left: 180px;
+.reloadCanvas {
+    position: absolute;
+    margin-top: -250px;
+    margin-left: -200px;
     color: rgb(131, 131, 131);
     border-color: rgb(0, 0, 0);
     background-color: rgb(97, 74, 74);
