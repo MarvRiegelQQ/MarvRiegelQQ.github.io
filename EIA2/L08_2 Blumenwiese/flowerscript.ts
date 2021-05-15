@@ -32,7 +32,7 @@ namespace FieldOfFlowers {
         drawTrees(14, posTreesStart, posTreesEnd, 0.25, 0.37, 1);
         posTreesStart.y = horizon + 15;
         drawTrees(14, posTreesStart, posTreesEnd, 0.20, 0.37, 1);
-        drawFlowers(5);
+        drawFlowers(0);
         for (var i: number = 0; i < 10; i++); 
        
     }
