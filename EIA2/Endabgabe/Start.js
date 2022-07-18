@@ -5,7 +5,7 @@ var Gemuesegarten;
     startButton.addEventListener("click", startfct);
     // http://net-informations.com/js/iq/load.htm
     function startfct() {
-        window.location.href = "https://marvriegelqq.github.io/EIA2/Endabgabe/Gemuesegarten.html";
+        window.location.href = "https://marvriegelqq.github.io/Endabgabe/Gemuesegarten.html";
     }
 })(Gemuesegarten || (Gemuesegarten = {}));
 //# sourceMappingURL=Start.js.map
