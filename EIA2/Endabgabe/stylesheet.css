@@ -15,7 +15,7 @@ body {
     grid-template-columns: repeat(8, auto);
     margin: 50px auto;
     justify-content: space-between;
-    border: 9px solid rgb(9, 99, 1);
+    border: 9px solid rgb(0, 0, 0);
     border-radius: 30px;
 }
 .field {
