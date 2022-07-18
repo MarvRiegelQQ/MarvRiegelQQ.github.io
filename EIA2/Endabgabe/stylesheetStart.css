@@ -6,8 +6,8 @@ body {
 #content {
     width: 60%;
     height: 60%;
-    background-color: rgba(249, 241, 230, 0.709);
-    border: 5px solid rgb(77, 45, 4);
+    background-color: rgba(138, 138, 138, 0.709);
+    border: 5px solid rgb(0, 0, 0);
     left: 45%;
     top: 55%;
     margin-left: -25%;
@@ -19,14 +19,13 @@ h1 {
     width: 100%;
     text-align: center;
     font-size: 40px;
-    color: rgb(28, 94, 30);
+    color: rgb(0, 0, 0);
 }
 
 #startButton{
     position: absolute;
-    background-color: blanchedalmond;
     font-size: 20px;
-    border: 5px solid rgb(77, 45, 4);
+    border: 5px solid rgb(255, 148, 7);
     height: 70px;
     width: 150px;
     border-radius: 20px;
@@ -36,7 +35,7 @@ h1 {
 }
 
 #startButton:hover {
-    border: 7px solid rgb(77, 45, 4);
+    border: 7px solid rgb(0, 0, 0);
     transition-duration: 0,4s;
 }
 
