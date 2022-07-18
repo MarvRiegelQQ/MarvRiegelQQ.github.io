@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheetStart.css">
+
+    
+    <title>Gemüsegarten Startscreen</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Gemüsegarten</h1>
+
+        <Form id="formElement" action="/Endabgabe/Gemuesegarten.html" method="get">
+
+            <div id="form">
+
+                <fieldset>
+                    <legend>minimale Preisschwankung</legend>
+                            <br>
+                            <input type="range" name="minPrice" min="101" max="110" step="1">
+                </fieldset>
+
+                <fieldset>
+                    <legend>maximale Preisschwankung</legend>
+                            <br>
+                            <input type="range" name="maxPrice" min="120" max="125" step="1">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Startkapital</legend>
+                        <br>
+                        <label for="100">250€</label>
+                        <input type="radio" name="seedMoney" id="250" value="250">
+
+                        <label for="250">500€</label>
+                        <input type="radio" name="seedMoney" id="500" value="500">
+
+                        <label for="500">900€</label>
+                        <input type="radio" name="seedMoney" id="900" value="900">
+                </fieldset>
+
+                <br>
+                <input type="submit" id="startButton" name="startButton" value="start">
+
+            </div>
+        </Form>
+    </div>
+
+
+                
+    
+    
+</body>
+</html>
