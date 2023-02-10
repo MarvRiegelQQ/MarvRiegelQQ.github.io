@@ -1,4 +1,4 @@
-
+(function() {
         const canvas = document.getElementById("canvas") as HTMLCanvasElement;
         const ctx = canvas.getContext("2d");
         const colorInput = document.getElementById("colorInput") as HTMLInputElement;
@@ -91,3 +91,4 @@
         }
     });
 }}
+})
