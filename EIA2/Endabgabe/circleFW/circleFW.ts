@@ -1,3 +1,5 @@
+(function() {
+
 const myCanvas = document.getElementById("canvas") as HTMLCanvasElement;
 const context = myCanvas.getContext("2d");
 
@@ -66,3 +68,5 @@ function xpldAnimate() {
 }
 
 xpldAnimate();
+
+})();
