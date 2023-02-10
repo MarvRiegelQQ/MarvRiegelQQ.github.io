@@ -97,4 +97,4 @@
         }
     });
 })();
-//# sourceMappingURL=particles.js.map
+//# sourceMappingURL=trail.js.map
