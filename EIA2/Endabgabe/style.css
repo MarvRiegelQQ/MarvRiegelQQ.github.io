@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #05386b;
+  }
+  
+  canvas {
+    background-color: #05386b;
+    border: 1px solid lightgray;
+  }
+  
+  #inputs {
+    margin-left: 20px;
+  }
+  
