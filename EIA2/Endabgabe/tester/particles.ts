@@ -1,75 +1,10 @@
-//window.onload = function() {
-    (function() {
+(function() {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement;
   const ctx = canvas.getContext("2d");
   const colorInput = document.getElementById("colorInput") as HTMLInputElement;
   const sizeInput = document.getElementById("sizeInput") as HTMLInputElement;
   const shapeInput = document.getElementById("shapeInput") as HTMLSelectElement; 
 
-  //canvas.width = window.innerWidth;
-  //canvas.height = window.innerHeight;
-
-//   class Particle {
-//     x: number;
-//     y: number;
-//     color: string;
-//     size: number;
-//     xSpeed: number;
-//     ySpeed: number;
-//     opacity: number;
-//     prevX: number;
-//     prevY: number;
-  
-//     constructor(x: number, y: number, color: string, size: number) {
-//         this.x = x;
-//         this.y = y;
-//         this.color = color;
-//         this.size = size;
-//         this.xSpeed = (Math.random() - 0.5) * 20;
-//         this.ySpeed = (Math.random() - 0.5) * 20;
-//         this.opacity = 1;
-//         this.prevX = x;
-//         this.prevY = y;
-//     }
-  
-//     update() {
-//         this.prevX = this.x;
-//         this.prevY = this.y;
-//         this.x += this.xSpeed;
-//         this.y += this.ySpeed;
-//         this.ySpeed += 0.2;
-//         this.opacity -= 0.005;
-//     }
-  
-//     draw() {
-//         ctx.save();
-//         ctx.beginPath();
-//         ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-//         ctx.fillStyle = this.color;
-//         ctx.globalAlpha = this.opacity;
-//         ctx.fill();
-//         ctx.closePath();
-//         ctx.restore();
-  
-//         ctx.save();
-//         ctx.beginPath();
-//         ctx.arc(this.x, this.y, this.size * 1.2, 0, 2 * Math.PI);
-//         ctx.fillStyle = this.color;
-//         ctx.globalAlpha = this.opacity * 0.8;
-//         ctx.fill();
-//         ctx.closePath();
-//         ctx.restore();
-  
-//         ctx.save();
-//         ctx.beginPath();
-//         ctx.arc(this.x, this.y, this.size * 1.5, 0, 2 * Math.PI);
-//         ctx.fillStyle = this.color;
-//         ctx.globalAlpha = this.opacity * 0.6;
-//         ctx.fill();
-//         ctx.closePath();
-//         ctx.restore();
-//    }
-//   }
 
 class Particle {
     x: number;
