@@ -50,29 +50,29 @@
                     angle += Math.PI / 5;
                 }
             }
-            let particleArray = [];
-            function animate() {
-                requestAnimationFrame(animate);
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                for (let i = 0; i < particleArray.length; i++) {
-                    particleArray[i].update();
-                    particleArray[i].draw();
-                    if (particleArray[i].opacity <= 0) {
-                        particleArray.splice(i, 1);
-                    }
-                }
-            }
-            animate();
-            canvas.addEventListener("click", function (event) {
-                let rect = canvas.getBoundingClientRect();
-                let x = event.clientX - rect.left;
-                let y = event.clientY - rect.top;
-                let shape = shapeInput.value;
-                for (let i = 0; i < 20; i++) {
-                    particleArray.push(new Particle(x, y, colorInput.value, Number(sizeInput.value), shapeInput.value));
-                }
-            });
         }
     }
+    let particleArray = [];
+    function animate() {
+        requestAnimationFrame(animate);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < particleArray.length; i++) {
+            particleArray[i].update();
+            particleArray[i].draw();
+            if (particleArray[i].opacity <= 0) {
+                particleArray.splice(i, 1);
+            }
+        }
+    }
+    animate();
+    canvas.addEventListener("click", function (event) {
+        let rect = canvas.getBoundingClientRect();
+        let x = event.clientX - rect.left;
+        let y = event.clientY - rect.top;
+        let shape = shapeInput.value;
+        for (let i = 0; i < 20; i++) {
+            particleArray.push(new Particle(x, y, colorInput.value, Number(sizeInput.value), shapeInput.value));
+        }
+    });
 });
 //# sourceMappingURL=notrail.js.map
