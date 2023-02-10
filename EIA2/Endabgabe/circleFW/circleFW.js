@@ -1,12 +1,9 @@
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-// Set the canvas size to be the full size of the window
-//canvas.width = window.innerWidth;
-//canvas.height = window.innerHeight;
+const myCanvas = document.getElementById("canvas");
+const context = myCanvas.getContext("2d");
 // Array to store all the particles
 const particles = [];
-// Particle class to represent each individual particle in the explosion
-class Particle {
+// RndColour class to represent each individual particle in the explosion
+class RndColour {
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -21,34 +18,35 @@ class Particle {
         this.vy += 0.05;
     }
     draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-        ctx.fillStyle = this.color;
-        ctx.fill();
+        context.beginPath();
+        context.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+        context.fillStyle = this.color;
+        context.fill();
     }
 }
 // Event listener for mouse click
-canvas.addEventListener("click", (event) => {
+myCanvas.addEventListener("click", (event) => {
     // Get the mouse click position
-    const x = event.clientX;
-    const y = event.clientY;
+    const rect = myCanvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
     // Generate the particles for the explosion
     for (let i = 0; i < 50; i++) {
-        particles.push(new Particle(x, y));
+        particles.push(new RndColour(x, y));
     }
 });
 // Animation loop to update and draw the particles
-function animate() {
-    requestAnimationFrame(animate);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+function xpldAnimate() {
+    requestAnimationFrame(xpldAnimate);
+    context.clearRect(0, 0, myCanvas.width, myCanvas.height);
     for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].draw();
-        if (particles[i].y > canvas.height) {
+        if (particles[i].y > myCanvas.height) {
             particles.splice(i, 1);
             i--;
         }
     }
 }
-animate();
+xpldAnimate();
 //# sourceMappingURL=circleFW.js.map
