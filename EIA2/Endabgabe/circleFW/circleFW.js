@@ -21,43 +21,32 @@
             this.vy += 0.05;
         }
         draw() {
-            switch (this.shape) {
-                case "circle":
-                    context.beginPath();
-                    context.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-                    context.fillStyle = this.color;
-                    context.fill();
-                    break;
-                case "square":
-                    context.fillStyle = this.color;
-                    context.fillRect(this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
-                    break;
-                case "triangle":
-                    context.beginPath();
-                    context.moveTo(this.x, this.y - this.size);
-                    context.lineTo(this.x - this.size, this.y + this.size);
-                    context.lineTo(this.x + this.size, this.y + this.size);
-                    context.closePath();
-                    context.fillStyle = this.color;
-                    context.fill();
-                    break;
-                case "star":
-                    context.beginPath();
-                    for (let i = 0; i < 5; i++) {
-                        const angle = i * 2 * Math.PI / 5;
-                        const x = this.x + this.size * Math.cos(angle);
-                        const y = this.y + this.size * Math.sin(angle);
-                        if (i === 0) {
-                            context.moveTo(x, y);
-                        }
-                        else {
-                            context.lineTo(x, y);
-                        }
-                    }
-                    context.closePath();
-                    context.fillStyle = this.color;
-                    context.fill();
-                    break;
+            context.fillStyle = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            // Draw the particle based on the selected shape
+            if (this.shape === "circle") {
+                context.beginPath();
+                context.arc(this.x, this.y, 5, 0, 2 * Math.PI);
+                context.fill();
+            }
+            else if (this.shape === "square") {
+                context.fillRect(this.x - 5, this.y - 5, 10, 10);
+            }
+            else if (this.shape === "triangle") {
+                context.beginPath();
+                context.moveTo(this.x - 5, this.y + 5);
+                context.lineTo(this.x, this.y - 5);
+                context.lineTo(this.x + 5, this.y + 5);
+                context.fill();
+            }
+            else if (this.shape === "star") {
+                context.beginPath();
+                context.moveTo(this.x, this.y - 5);
+                context.lineTo(this.x + 3, this.y + 2);
+                context.lineTo(this.x - 5, this.y + 2);
+                context.lineTo(this.x + 2, this.y + 5);
+                context.lineTo(this.x - 2, this.y + 5);
+                context.lineTo(this.x - 5, this.y + 2);
+                context.fill();
             }
         }
     }
