@@ -1,5 +1,6 @@
 const options = document.getElementsByName('options');
 const container = document.getElementById('container');
+let currentScript = null;
 for (const option of options) {
     option.addEventListener('change', (event) => {
         let url;
@@ -8,7 +9,10 @@ for (const option of options) {
             url = 'circleFW/circleFW.js';
         }
         else if (target.value === 'option2') {
-            url = 'trailingFW/particles.js';
+            url = 'tester/particles.js';
+        }
+        if (currentScript) {
+            container.removeChild(currentScript);
         }
         fetch(url)
             .then((response) => response.text())
@@ -16,6 +20,7 @@ for (const option of options) {
             const element = document.createElement('script');
             element.text = script;
             container.appendChild(element);
+            currentScript = element;
         })
             .catch((error) => {
             console.error(error);
