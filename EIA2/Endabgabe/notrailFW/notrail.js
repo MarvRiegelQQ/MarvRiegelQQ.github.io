@@ -4,6 +4,7 @@
     let particleArray = [];
     ;
     let selectedShape;
+    //Klasse für einzelne Particle
     class Particle {
         constructor(x, y, color, particleRadius, shape) {
             this.x = x;
@@ -13,6 +14,7 @@
             this.shape = shape;
             this.opacity = 1;
         }
+        // draw function für versch. formen der particle, liest das dropdown aus
         draw() {
             ctx.beginPath();
             ctx.globalAlpha = this.opacity;
