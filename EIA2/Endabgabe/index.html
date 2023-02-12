@@ -17,29 +17,45 @@
       </head>
   <body>
     <div id="container"></div>
-      <div id="input-container">
-     
+    <div id="input-container">
       <label for="colorInput">Color:</label>
       <input id="colorInput" type="color" value="#ffffff"/>
       <br>
       <label for="sizeInput">Size:</label>
       <input id="sizeInput" type="number" value="5"/>
-
+    
       <label for="shapeInput">Particle shape</label>
       <select id="shapeInput">
-      <option value="circle">Circle</option>
-      <option value="triangle">Triangle</option>
-      <option value="square">Square</option>
-      <option value="star">Star</option>
+        <option value="circle">Circle</option>
+        <option value="triangle">Triangle</option>
+        <option value="square">Square</option>
+        <option value="star">Star</option>
       </select>
-     
+      
       <input type="radio" id="option1" name="options" value="option1">
       <label for="option1">Option 1</label>
       
       <input type="radio" id="option2" name="options" value="option2">
       <label for="option2">Option 2</label>
-
+    
+      <br><br>
+      <button id="saveButton">Save</button>
+      <button id="loadButton">Load</button>
     </div>
+    
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Color</th>
+          <th>Size</th>
+          <th>Shape</th>
+          <th>Option</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+
     <canvas id="canvas" width="800" height="800"></canvas>
     <script src="loader.js"></script>
     </body>
