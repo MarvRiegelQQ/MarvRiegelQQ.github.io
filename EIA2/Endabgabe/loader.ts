@@ -7,7 +7,7 @@ for (const option of options) {
     let url;
     const target = event.target as HTMLInputElement;
     if (target.value === 'option1') {
-      url = 'tester/trail.js';
+      url = 'trailingFW/particles.js';
     } else if (target.value === 'option2') {
       url = 'tester2/notrail.js';
     }
