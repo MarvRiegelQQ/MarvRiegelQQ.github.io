@@ -4,21 +4,21 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1>FIREWORK!</h1>
-    <table id="dataTable">
-      <thead>
-        <tr>
-          <th>Color</th>
-          <th>Size</th>
-          <th>Shape</th>
-          <th>Option</th>
-        </tr>
-      </thead>
-      <tbody id="tableBody">
-      </tbody>
-    </table>
+    <h1 class="headline">FIREWORK!</h1>
+    <div class="container">
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>Color</th>
+            <th>Size</th>
+            <th>Shape</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
 
-    <div id="container">
       <canvas id="canvas" width="800" height="800"></canvas>
       <div id="input-container">
         <label for="colorInput">Color:</label>
@@ -26,7 +26,7 @@
         <br>
         <label for="sizeInput">Size:</label>
         <input id="sizeInput" type="number" value="5"/>
-        <br>      
+
         <label for="shapeInput">Particle shape</label>
         <select id="shapeInput">
           <option value="circle">Circle</option>
@@ -34,19 +34,18 @@
           <option value="square">Square</option>
           <option value="star">Star</option>
         </select>
-        <br>
+
         <input type="radio" id="option1" name="options" value="option1">
-        <label for="option1">Trail</label>
-        <br>
+        <label for="option1">Option 1</label>
+
         <input type="radio" id="option2" name="options" value="option2">
-        <label for="option2">No Trail</label>
-      
+        <label for="option2">Option 2</label>
+
         <br><br>
         <button id="saveButton">Save</button>
         <button id="loadButton">Load</button>
       </div>
     </div>
-
     <script src="loader.js"></script>
   </body>
 </html>
