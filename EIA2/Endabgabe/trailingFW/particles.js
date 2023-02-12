@@ -4,64 +4,7 @@
     const colorInput = document.getElementById("colorInput");
     const sizeInput = document.getElementById("sizeInput");
     const shapeInput = document.getElementById("shapeInput");
-    //canvas.width = window.innerWidth;
-    //canvas.height = window.innerHeight;
-    //   class Particle {
-    //     x: number;
-    //     y: number;
-    //     color: string;
-    //     size: number;
-    //     xSpeed: number;
-    //     ySpeed: number;
-    //     opacity: number;
-    //     prevX: number;
-    //     prevY: number;
-    //     constructor(x: number, y: number, color: string, size: number) {
-    //         this.x = x;
-    //         this.y = y;
-    //         this.color = color;
-    //         this.size = size;
-    //         this.xSpeed = (Math.random() - 0.5) * 20;
-    //         this.ySpeed = (Math.random() - 0.5) * 20;
-    //         this.opacity = 1;
-    //         this.prevX = x;
-    //         this.prevY = y;
-    //     }
-    //     update() {
-    //         this.prevX = this.x;
-    //         this.prevY = this.y;
-    //         this.x += this.xSpeed;
-    //         this.y += this.ySpeed;
-    //         this.ySpeed += 0.2;
-    //         this.opacity -= 0.005;
-    //     }
-    //     draw() {
-    //         ctx.save();
-    //         ctx.beginPath();
-    //         ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-    //         ctx.fillStyle = this.color;
-    //         ctx.globalAlpha = this.opacity;
-    //         ctx.fill();
-    //         ctx.closePath();
-    //         ctx.restore();
-    //         ctx.save();
-    //         ctx.beginPath();
-    //         ctx.arc(this.x, this.y, this.size * 1.2, 0, 2 * Math.PI);
-    //         ctx.fillStyle = this.color;
-    //         ctx.globalAlpha = this.opacity * 0.8;
-    //         ctx.fill();
-    //         ctx.closePath();
-    //         ctx.restore();
-    //         ctx.save();
-    //         ctx.beginPath();
-    //         ctx.arc(this.x, this.y, this.size * 1.5, 0, 2 * Math.PI);
-    //         ctx.fillStyle = this.color;
-    //         ctx.globalAlpha = this.opacity * 0.6;
-    //         ctx.fill();
-    //         ctx.closePath();
-    //         ctx.restore();
-    //    }
-    //   }
+    //Klasse für einzelne Particle
     class Particle {
         constructor(x, y, color, size, shape) {
             this.x = x;
@@ -85,6 +28,7 @@
                 this.trail[i].opacity -= 0.02;
             }
         }
+        //draw function inlklusive Trail mit for/if für die versch. Formen
         draw() {
             for (let i = 0; i < this.trail.length; i++) {
                 ctx.beginPath();

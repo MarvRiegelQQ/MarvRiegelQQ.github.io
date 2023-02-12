@@ -1,8 +1,10 @@
-(function() {
+(function() { //function um browser nicht zu verwirren
 const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 const ctx = canvas.getContext("2d");
 let particleArray: Particle[] = [];;
 let selectedShape: string;
+
+//Klasse für einzelne Particle
 
 class Particle {
   x: number;
@@ -20,6 +22,8 @@ class Particle {
     this.shape = shape;
     this.opacity = 1;
   }
+
+// draw function für versch. formen der particle, liest das dropdown aus
 
   draw() {
     ctx.beginPath();
