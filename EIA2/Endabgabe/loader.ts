@@ -11,7 +11,7 @@ for (const option of options) {
     if (target.value === 'option1') {
       url = 'trailingFW/particles.js';
     } else if (target.value === 'option2') {
-      url = 'circleFW/circleFW.js';
+      url = 'notrailFW/notrail.js';
     }
 
     if (currentScript) {
