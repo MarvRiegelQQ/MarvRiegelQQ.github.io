@@ -6,10 +6,6 @@ body {
   text-align: center;
 }
 
-.container {
-  display: flex;
-}
-
 table {
   border-collapse: collapse;
 }
