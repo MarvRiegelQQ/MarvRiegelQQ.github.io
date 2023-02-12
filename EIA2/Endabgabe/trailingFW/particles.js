@@ -1,4 +1,4 @@
-window.onload = function () {
+(function () {
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
     const colorInput = document.getElementById("colorInput");
@@ -154,5 +154,5 @@ window.onload = function () {
             particleArray.push(new Particle(x, y, colorInput.value, Number(sizeInput.value), shapeInput.value));
         }
     });
-};
+})();
 //# sourceMappingURL=particles.js.map
