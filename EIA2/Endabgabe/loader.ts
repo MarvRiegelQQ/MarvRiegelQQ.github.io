@@ -31,6 +31,9 @@ for (const option of options) {
       });
   });
 
+//Serverkommunikation, funktioniert nicht... 
+//Aus Verzweiflung aufgehört und einfach mein Schicksal akzeptiert, dass es nicht geht 
+
   async function saveValues() {
     const colorInput = document.getElementById("colorInput") as HTMLInputElement;
     const colorValue = colorInput.value;
