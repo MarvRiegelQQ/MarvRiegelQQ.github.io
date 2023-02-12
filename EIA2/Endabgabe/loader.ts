@@ -9,9 +9,9 @@ for (const option of options) {
     let url;
     const target = event.target as HTMLInputElement;
     if (target.value === 'option1') {
-      url = 'trailingFW/trail.js';
+      url = 'trailingFW/particles.js';
     } else if (target.value === 'option2') {
-      url = 'tester2/notrail.js';
+      url = 'circleFW/circleFW.js';
     }
 
     if (currentScript) {
@@ -46,7 +46,7 @@ for (const option of options) {
     
     const values = { color: colorValue, size: sizeValue, shape: shapeValue, option: optionValue };
     
-    const response = await fetch("https://your-server.com/save-values", {
+    const response = await fetch("https://webuser.hs-furtwangen.de/~laubsche/Database/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -62,7 +62,7 @@ for (const option of options) {
   }
   
   async function loadValues() {
-    const response = await fetch("https://your-server.com/load-values");
+    const response = await fetch("https://webuser.hs-furtwangen.de/~laubsche/Database/");
     const values = await response.json();
     
     const tableBody = document.getElementById("tableBody");
