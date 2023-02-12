@@ -2,12 +2,6 @@ body {
   background-color: rgb(126, 126, 126);
 }
 
-#container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 table {
   float: left;
   margin: 0 10px 0 0;
@@ -16,6 +10,9 @@ table {
 canvas {
   background-color: black;
   border: 2px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #input-container {
